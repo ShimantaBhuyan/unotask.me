@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <title>Unotask</title>
+</head>
+
+<body>
+    <nav>
+        <div id="logoContainer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                <rect width="36" height="36" rx="11.0769" fill="url(#paint0_linear)" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M23.2532 35.8812V9.59128L14.5642 12.6563C13.8036 12.9246 12.9756 12.4886 12.7664 11.7097L11.3855 6.56732C11.2045 5.89325 11.5535 5.18983 12.1997 4.92619L24.2731 0.000732422C26.8961 0.12267 28.6763 0.434227 30.1656 1.23027C30.7946 1.56648 31.3866 1.96095 31.9346 2.40678V33.4379C31.3866 33.8837 30.7946 34.2782 30.1656 34.6144C28.4909 35.5095 26.4482 35.792 23.2532 35.8812Z"
+                    fill="#FFF3CE" />
+                <defs>
+                    <linearGradient id="paint0_linear" x1="18" y1="0" x2="18" y2="36" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#F9AE42" />
+                        <stop offset="1" stop-color="#F38B39" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span id="logoTitle">&nbsp;Unotask</span>
+        </div>
+        <a id="aboutLink" href="#about">About</a>
+    </nav>
+    <main>
+        <header id="heroSection">
+            <h1 id="headerText">Not just another task manager</h1>
+            <h4 id="subHeaderText">Do not let todo lists overwhelm you, Focus on just one task at a time using Unotask
+            </h4>
+            <div class="getAccess">
+                <input type="email" class="emailField" placeholder="your email id" />
+                <input type="submit" class="submitButton" value="Get early access" onclick="submitEmail()" />
+            </div>
+            <p>Promise we won't spam you 😬</p>
+            <div id="videoWrapper">
+                <div class="videoLoader"></div>
+                <div id="videoContainer">
+                    <video id="walkthroughVideo" width="1011.2px" height="632px" preload="metadata" autoplay muted loop>
+                        <source src="/assets/heroVideo.mp4" type="video/mp4">
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
+                </div>
+            </div>
+        </header>
+        <section id="buildUpSection"></section>
+        <section id="featureSection"></section>
+        <section id="howItWorksSection"></section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script>
+        let loader = document.querySelector('.videoLoader');
+        let walkthroughVideo = document.getElementById("walkthroughVideo");
+        function isVideoLoading(isLoading) {
+            loader.style.display = isLoading ? 'block' : 'none';
+        }
+        isVideoLoading(true);
+        walkthroughVideo.addEventListener('canplaythrough', (event) => {
+            isVideoLoading(false);
+        })
+    </script>
+</body>
+
+</html>

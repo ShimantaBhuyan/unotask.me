@@ -1,0 +1,154 @@
+body, html {
+    --brandTitleColor: #611616;
+    --brandOrange: #F99A42;
+    --G1: #151B30;
+    --G3: #373F61;
+    --G5: #646C8B;
+    --G6: #8E95AF;
+    --G7: #BABFD1;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+#logoContainer {
+    display: flex;
+    align-items: center;
+}
+  
+#logoTitle {
+    font-size: 18px;
+    color: var(--brandTitleColor);
+    filter: drop-shadow(0 4mm 4mm rgba(0, 0, 0, 0.25));
+}
+
+a:visited {
+    color: var(--G6);
+    text-decoration: none;
+}
+
+#aboutLink {
+    text-decoration: none;
+    color: var(--G6);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-inline: 4.5625rem;
+    padding-block: 2.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#headerText {
+    color: var(--G3);
+    font-size: 4rem;
+    line-height: 4.6875rem;
+    margin-bottom: 1rem;
+}
+
+#subHeaderText {
+    color: var(--G6);
+    font-size: 1.5rem;
+    line-height: 1.79rem;
+    margin-bottom: 4.0625rem;
+}
+
+input {
+    font-family: 'Rubik', sans-serif;
+}
+
+.emailField {
+    font-size: 16px;
+    line-height: 19.09px;
+    height: 54px;
+    padding: 17px 164px 17px 24px;
+    border: 1px solid #BABFD1;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.submitButton {
+    background-color: var(--brandOrange);
+    height: 54px;
+    width: 12.625rem;
+    padding: 14px 24px 15px;
+    background: linear-gradient(0deg, #F99A42, #F99A42), linear-gradient(180deg, #F9AE42 0%, #F48C3A 100%);
+    box-shadow: 0px 8px 14px rgba(249, 171, 65, 0.51);
+    border: none;
+    border-radius: 8px;
+    color:rgba(255, 255, 255);
+    font-size: 20px;
+    line-height: 23px;
+    margin-left: -160px;
+    cursor: pointer;
+}
+
+#videoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 687px;
+    width: 1074px;
+    margin-top: 51px;
+    background: linear-gradient(180deg, rgba(242, 242, 242, 0.7) 0%, rgba(240, 240, 240, 0.52) 100%);
+    backdrop-filter: blur(7px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 50px;
+    line-height: 0;
+}
+
+#videoContainer {
+    width: 1011.2px;
+    height: 632px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    position: absolute;
+    top: 1px;
+}
+
+.videoLoader {
+    position: absolute;
+    width:50px;
+    height:50px;
+    background:#616366;
+    border-radius: 50%;
+    animation: bo1 3s infinite linear;
+}
+@keyframes bo1{
+    12.5% {border-radius: 37% 63% 70% 30% / 30% 62% 38% 70%}
+    25%   {border-radius: 50% 50% 70% 30% / 52% 62% 38% 48%}
+    37.5% {border-radius: 33% 67% 18% 82% / 52% 75% 25% 48%}
+    50%   {border-radius: 73% 27% 18% 82% / 52% 32% 68% 48%}
+    62.5% {border-radius: 73% 27% 74% 26% / 64% 32% 68% 36%}
+    75%   {border-radius: 84% 16% 15% 85% / 55% 79% 21% 45%}
+    87.5% {border-radius: 12% 88% 69% 31% / 10% 66% 34% 90%}
+}
