@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url("./assets/fonts/Gilroy-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url("./assets/fonts/Gilroy-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url("./assets/fonts/SFPro.ttf");
+}
+
+
 body, html {
     --brandTitleColor: #611616;
     --brandOrange: #F99A42;
@@ -8,11 +24,8 @@ body, html {
     --G7: #BABFD1;
     padding: 0;
     margin: 0;
-    margin-bottom: 20px;
-}
-
-body {
-    font-family: 'Rubik', sans-serif;
+    max-width: 100%;
+    overflow-x:hidden;
 }
 
 #logoContainer {
@@ -21,9 +34,11 @@ body {
 }
   
 #logoTitle {
+    font-family: 'Rubik', sans-serif;
     font-size: 18px;
     color: var(--brandTitleColor);
     filter: drop-shadow(0 4mm 4mm rgba(0, 0, 0, 0.25));
+    padding-left: 12.87px;
 }
 
 a:visited {
@@ -32,8 +47,12 @@ a:visited {
 }
 
 #aboutLink {
+    font-family: "SF Pro Text";
+    font-weight: 500;
     text-decoration: none;
     color: var(--G6);
+    font-size: 24px;
+    line-height: 29px;
 }
 
 nav {
@@ -46,6 +65,14 @@ nav {
     right: 0;
     padding-inline: 4.5625rem;
     padding-block: 2.5rem;
+    filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.15));
+}
+
+@media screen and (max-width: 420px) {
+    nav {
+        padding-inline: 2rem;
+        padding-block: 1.25rem;
+    }
 }
 
 main {
@@ -62,6 +89,7 @@ header {
 }
 
 #headerText {
+    font-family: "Gilroy-SemiBold";
     color: var(--G3);
     font-size: 4rem;
     line-height: 4.6875rem;
@@ -69,10 +97,34 @@ header {
 }
 
 #subHeaderText {
+    font-family: "SF Pro Text";
+    font-weight: 500;
     color: var(--G6);
     font-size: 1.5rem;
     line-height: 1.79rem;
     margin-bottom: 4.0625rem;
+}
+
+p {
+    font-family: "SF Pro Text";
+    font-weight: 500;
+}
+
+@media screen and (max-width: 420px) {
+    main {
+        padding-top: 50px;
+    }
+    #headerText {
+        font-size: 2rem;
+        line-height: 1.6875rem;
+        margin-bottom: 1rem;
+    }
+    #subHeaderText {
+        color: var(--G6);
+        font-size: 1rem;
+        line-height: 1.2rem;
+        margin-bottom: 2.0625rem;
+    }
 }
 
 input {
@@ -80,16 +132,18 @@ input {
 }
 
 .emailField {
+    font-family: "SF Pro Text";
     font-size: 16px;
     line-height: 19.09px;
     height: 54px;
-    padding: 17px 164px 17px 24px;
+    padding: 20px 164px 17px 24px;
     border: 1px solid #BABFD1;
     box-sizing: border-box;
     border-radius: 8px;
 }
 
 .submitButton {
+    font-family: "Gilroy-SemiBold";
     background-color: var(--brandOrange);
     height: 54px;
     width: 12.625rem;
@@ -132,7 +186,7 @@ input {
 
 video {
     position: absolute;
-    top: 1px;
+    top: 1.5px;
 }
 
 .videoLoader {
@@ -151,4 +205,14 @@ video {
     62.5% {border-radius: 73% 27% 74% 26% / 64% 32% 68% 36%}
     75%   {border-radius: 84% 16% 15% 85% / 55% 79% 21% 45%}
     87.5% {border-radius: 12% 88% 69% 31% / 10% 66% 34% 90%}
+}
+
+#backdrop {
+    position: absolute;
+    top: 55rem;
+    height: 23.375rem;
+    width: 100vw;
+    background: rgb(2,0,36);
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(249,174,66,1) 0%, rgba(244,140,58,1) 100%);
+    z-index: -1;
 }

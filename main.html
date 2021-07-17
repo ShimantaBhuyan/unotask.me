@@ -38,8 +38,10 @@
             <h4 id="subHeaderText">Do not let todo lists overwhelm you, Focus on just one task at a time using Unotask
             </h4>
             <div class="getAccess">
-                <input type="email" class="emailField" placeholder="your email id" />
-                <input type="submit" class="submitButton" value="Get early access" onclick="submitEmail()" />
+                <form id="getAccessForm">
+                    <input type="email" class="emailField" placeholder="your email id" />
+                    <input type="submit" class="submitButton" value="Get early access" />
+                </form>
             </div>
             <p>Promise we won't spam you 😬</p>
             <div id="videoWrapper">
@@ -52,6 +54,7 @@
                 </div>
             </div>
         </header>
+        <div id="backdrop"></div>
         <section id="buildUpSection"></section>
         <section id="featureSection"></section>
         <section id="howItWorksSection"></section>
@@ -63,13 +66,22 @@
     <script>
         let loader = document.querySelector('.videoLoader');
         let walkthroughVideo = document.getElementById("walkthroughVideo");
-        function isVideoLoading(isLoading) {
+        const isVideoLoading = (isLoading) => {
             loader.style.display = isLoading ? 'block' : 'none';
         }
         isVideoLoading(true);
         walkthroughVideo.addEventListener('canplaythrough', (event) => {
             isVideoLoading(false);
         })
+        const submitEmail = (e) => {
+            console.log(e)
+        }
+
+        let form = document.getElementById("getAccessForm");
+        form.onsubmit = (e) => {
+            e.preventDefault();
+            console.log(e.target[0].value);
+        }
     </script>
 </body>
 
