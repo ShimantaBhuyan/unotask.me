@@ -1,0 +1,63 @@
+
+@media screen and (max-width: 500px) {
+    nav {
+        padding-inline: 2rem;
+        padding-block: 1rem;
+    }
+    #aboutLink {
+        font-size: 18px;
+    }
+    main {
+        padding-top: 90px;
+    }
+    #headerText {
+        font-size: 1.3rem;
+        line-height: 1.4875rem;
+        margin-bottom: 1rem;
+    }
+    #subHeaderText {
+        font-size: 12px;
+        line-height: 1rem;
+        margin-bottom: 2.0625rem;
+        text-align: center;
+    }
+    .emailField {
+        font-size: 12px;
+        line-height: 14.09px;
+        height: 34px;
+        padding: 20px 70px 20px 12px;
+        border-radius: 8px;
+    }
+    .submitButton {
+        height: 42px;
+        width: 6.5rem;
+        padding: 12px 6px 12px;
+        box-shadow: 0px 8px 14px rgba(249, 171, 65, 0.51);
+        border-radius: 8px;
+        font-size: 12px;
+        line-height: 14px;
+        margin-left: -70px;
+    }
+    #videoWrapper {
+        height: 200px;
+        width: 310px;
+        border-radius: 30px;
+        margin-top: 25px;
+    }
+    #videoContainer {
+        width: 295px;
+        height: 188px;
+        border-radius: 20px;
+    }
+    #backdrop {
+        top: 27rem;
+        height: 12rem;
+    }
+    video {
+        width: 295px;
+        height: 188px;
+    }
+    p {
+        font-size: 12px;
+    }
+}

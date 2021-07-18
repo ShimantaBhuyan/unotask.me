@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="mobile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
@@ -47,7 +48,7 @@
             <div id="videoWrapper">
                 <div class="videoLoader"></div>
                 <div id="videoContainer">
-                    <video id="walkthroughVideo" width="1011.2px" height="632px" preload="metadata" autoplay muted loop>
+                    <video id="walkthroughVideo" preload="metadata" autoplay muted loop>
                         <source src="/assets/heroVideo.mp4" type="video/mp4">
                         Sorry, your browser doesn't support embedded videos.
                     </video>
@@ -67,7 +68,8 @@
         let loader = document.querySelector('.videoLoader');
         let walkthroughVideo = document.getElementById("walkthroughVideo");
         let navbar = document.getElementsByTagName("nav")[0];
-        
+
+        // loader for video player
         const isVideoLoading = (isLoading) => {
             loader.style.display = isLoading ? 'block' : 'none';
         }
@@ -75,10 +77,8 @@
         walkthroughVideo.addEventListener('canplaythrough', (event) => {
             isVideoLoading(false);
         })
-        const submitEmail = (e) => {
-            console.log(e)
-        }
 
+        // show hide navbar on scroll
         window.onscroll = () => {
             if(this.scrollY <= 10) {
                 navbar.className = ''
@@ -87,7 +87,8 @@
                 navbar.className = 'navbar-scrolled'
             }
         }
-
+        
+        // handle email submit
         let form = document.getElementById("getAccessForm");
         form.onsubmit = (e) => {
             e.preventDefault();
