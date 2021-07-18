@@ -598,6 +598,22 @@
         form.onsubmit = (e) => {
             e.preventDefault();
             console.log(e.target[0].value);
+            var reqBody = {
+                fromEmail: e.target[0].value,
+                subjectEmail: "Test from Unotask!"
+            }
+            fetch('https://sendgrid-function.vercel.app/api', {
+                method: "POST",
+                headers: {
+                    'Accept': '*',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(reqBody)
+            }).then(response => {
+                console.log(response);
+            }).catch(err => {
+                console.log(err);
+            })
         }
 
         tippy('.infoIcon', {
