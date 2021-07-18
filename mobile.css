@@ -159,4 +159,51 @@
         height: 280px;
         border-radius: 20px;
     }
+  
+    #carouselContainer {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .carouselImage img {
+        width: 380px !important;
+    }
+
+    #carouselIndicators {
+        max-width: 100%;
+        overflow-x: hidden;
+        margin-bottom: 90px;
+        justify-content: center;
+    }
+
+    .carouselIndicator {
+        padding: 12px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+    
+    .activeCarousel {
+        border: 2px solid #3A7DFF;
+        color: #3A7DFF;
+    }
+    
+    #carouselProgressStatic {
+        display: none;
+    }
+    
+    #carouselProgress {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .carouselImage img {
+        width: 320px !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .carouselImage img {
+        width: 280px !important;
+    }
 }

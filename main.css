@@ -342,6 +342,10 @@ article h3 {
     margin-top: 51.76px;
 }
 
+.featureCard:nth-of-type(4n) .featureCardTitle {
+    margin-top: 30px;
+}
+
 .featureCardDescription {
     font-family: 'SF Pro Text';
     font-size: 16px;
@@ -358,6 +362,8 @@ article h3 {
 
 #howItWorksSection {
     margin-top: 120px;
+    flex-flow: column nowrap;
+    margin-bottom: 50px;
 }
 
 #howItWorksSection h3 {
@@ -370,4 +376,66 @@ article h3 {
     font-family: 'SF Pro Text';
     font-size: 16px;
     padding: 10px
-  }
+}
+
+#carouselContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-x: hidden;
+    align-self: flex-start;
+}
+
+.carouselImage {
+    transition: all linear 1s;
+}
+
+#carouselIndicators {
+    width: 100%;
+    max-width: 1040px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.carouselIndicator {
+    padding: 24px;
+    background: #FFFFFF;
+    border: 2px solid #EEEFF8;
+    border-radius: 8px;
+    font-family: 'Gilroy-Medium';
+    font-size: 22px;
+    line-height: 26px;
+    color: #8E95AF;
+    display: block;
+    transition: all linear 0.5s;
+}
+
+.activeCarousel {
+    border: 2px solid #3A7DFF;
+    color: #3A7DFF;
+}
+
+#carouselProgressStatic {
+    position: absolute;
+    border: 1px solid #DADCED;
+    background-color: #DADCED;
+    width: 100%;
+    max-width: 1000px;
+    z-index: -1;
+}
+
+#carouselProgress {
+    position: absolute;
+    border: 1px solid var(--brandOrange);
+    background-color: var(--brandOrange);
+    width: 16%;
+    max-width: 1000px;
+    z-index: -1;
+    transition: all linear 0.5s;
+}
+
+/*200px, 570px, 775px*/

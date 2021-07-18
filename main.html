@@ -531,6 +531,30 @@
 
         <section id="howItWorksSection">
             <h3 class="buildUpItemHeader">How it works</h3>
+            <div id="carouselContainer">
+                <div class="carouselImage">
+                    <img src="assets/carousel/carouselImage1.png" alt="Adding tasks" loading="lazy" decoding="async" />
+                </div>
+                <div class="carouselImage">
+                    <img src="assets/carousel/carouselImage2.png" alt="Picking up a task to work on" loading="lazy"
+                        decoding="async" />
+                </div>
+                <div class="carouselImage">
+                    <img src="assets/carousel/carouselImage3.png" alt="Timer starts" loading="lazy" decoding="async" />
+                </div>
+                <div class="carouselImage">
+                    <img src="assets/carousel/carouselImage4.png" alt="Mark as finished" loading="lazy"
+                        decoding="async" />
+                </div>
+            </div>
+            <div id="carouselIndicators">
+                <hr id="carouselProgressStatic" />
+                <hr id="carouselProgress" />
+                <div class="carouselIndicator">Adding tasks</div>
+                <div class="carouselIndicator">Picking up a task to work on</div>
+                <div class="carouselIndicator">Timer starts</div>
+                <div class="carouselIndicator">Mark as finished</div>
+            </div>
             <div class="getAccess">
                 <form id="getAccessForm">
                     <input type="email" class="emailField" placeholder="your email id" />
@@ -581,6 +605,38 @@
         tippy('.infoIcon', {
             content: 'Roadmap item',
         });
+
+        var indexValue = 0;
+        var progressPercents = ['200px', '570px', '775px', '100%'];
+        const carouselProgressBar = document.getElementById('carouselProgress');
+        function slideShow() {
+            setTimeout(slideShow, 3000);
+            var x;
+            const img = document.querySelectorAll(".carouselImage");
+            const indicators = document.querySelectorAll(".carouselIndicator");
+            for (x = 0; x < img.length; x++) {
+                img[x].style.display = "none";
+                if (indicators[x].classList.contains("activeCarousel"))
+                    indicators[x].classList.remove("activeCarousel");
+                if (document.documentElement.clientWidth < 500) {
+                    indicators[x].style.display = "none";
+                }
+                else {
+                    indicators[x].style.display = "block";
+                }
+            }
+            indexValue++;
+            if (indexValue > img.length) {
+                indexValue = 1
+            }
+            img[indexValue - 1].style.display = "block";
+            indicators[indexValue - 1].classList.add("activeCarousel");
+            carouselProgressBar.style.width = progressPercents[indexValue - 1];
+            if (document.documentElement.clientWidth < 500) {
+                indicators[indexValue - 1].style.display = "block";
+            }
+        }
+        slideShow();
     </script>
 </body>
 
