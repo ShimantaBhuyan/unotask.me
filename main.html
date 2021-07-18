@@ -66,6 +66,8 @@
     <script>
         let loader = document.querySelector('.videoLoader');
         let walkthroughVideo = document.getElementById("walkthroughVideo");
+        let navbar = document.getElementsByTagName("nav")[0];
+        
         const isVideoLoading = (isLoading) => {
             loader.style.display = isLoading ? 'block' : 'none';
         }
@@ -75,6 +77,15 @@
         })
         const submitEmail = (e) => {
             console.log(e)
+        }
+
+        window.onscroll = () => {
+            if(this.scrollY <= 10) {
+                navbar.className = ''
+            }
+            else {
+                navbar.className = 'navbar-scrolled'
+            }
         }
 
         let form = document.getElementById("getAccessForm");
