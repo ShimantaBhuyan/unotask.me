@@ -221,6 +221,7 @@ video {
 
 #multitaskingCross {
     left: 50%;
+    bottom: 40px;
 }
 
 #buildUpSection, #howItWorksSection {
@@ -233,10 +234,10 @@ video {
 
 #featureSection {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    max-width: 1011.2px;
+    max-width: 100%;
 }
 
 #buildUpSection {
@@ -312,8 +313,45 @@ article h3 {
     margin-top: 0;
 }
 
+#featureContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
 .featureCard {
-    
+    width: 319px;
+    height: 330px;
+    background: #FFFFFF;
+    border: 3px solid #EEEFF8;
+    box-shadow: 0px 7.53994px 16.9649px rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+    padding: 22px;
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.featureCardTitle {
+    font-family: 'Gilroy-SemiBold';
+    font-size: 28px;
+    color: #373F61;
+    margin-top: 51.76px;
+}
+
+.featureCardDescription {
+    font-family: 'SF Pro Text';
+    font-size: 16px;
+    line-height: 30px;
+    color: #8E95AF;
+    margin-top: 31px;
+}
+
+.featureCardIconSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #howItWorksSection {
@@ -323,3 +361,11 @@ article h3 {
 #howItWorksSection h3 {
     margin-top: 0;
 }
+
+.tippy-box {
+    background-color: var(--G3);
+    color: #FFFFFF;
+    font-family: 'SF Pro Text';
+    font-size: 16px;
+    padding: 10px
+  }

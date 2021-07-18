@@ -18,12 +18,12 @@
         padding-top: 80px;
     }
     #headerText {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         line-height: 1.4875rem;
         margin-bottom: 1rem;
     }
     #subHeaderText {
-        font-size: 12px;
+        font-size: 16px;
         line-height: 1rem;
         margin-bottom: 2.0625rem;
         text-align: center;
@@ -148,5 +148,9 @@
     
     .buildUpImgs {
         transform: scale(1);
+    }
+
+    #howItWorksSection {
+        margin-top: 80px;
     }
 }
