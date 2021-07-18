@@ -258,10 +258,12 @@ video {
 
 .buildUpItem:nth-child(even) {
     flex-direction: row-reverse;
+    box-sizing: border-box;
 }
 
 .buildUpItem:nth-child(even) article {
-    max-width: 390px;
+    /* max-width: 390px; */
+    max-width: 47%;
 }
 
 .buildUpItem:last-of-type article {
