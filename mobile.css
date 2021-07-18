@@ -153,4 +153,9 @@
     #howItWorksSection {
         margin-top: 80px;
     }
+    .featureCard {
+        width: 280px;
+        height: 280px;
+        border-radius: 20px;
+    }
 }
