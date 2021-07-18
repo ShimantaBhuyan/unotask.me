@@ -1,14 +1,15 @@
 
 @media screen and (max-width: 500px) {
     nav {
+        height: 64px;
         padding-inline: 2rem;
-        padding-block: 1rem;
+        padding-block: 0.5rem;
     }
     #aboutLink {
         font-size: 18px;
     }
     main {
-        padding-top: 90px;
+        padding-top: 80px;
     }
     #headerText {
         font-size: 1.3rem;
@@ -23,7 +24,7 @@
     }
     .emailField {
         font-size: 12px;
-        line-height: 14.09px;
+        line-height: 12px;
         height: 34px;
         padding: 20px 70px 20px 12px;
         border-radius: 8px;
@@ -31,7 +32,7 @@
     .submitButton {
         height: 42px;
         width: 6.5rem;
-        padding: 12px 6px 12px;
+        padding: 14px 6px 12px;
         box-shadow: 0px 8px 14px rgba(249, 171, 65, 0.51);
         border-radius: 8px;
         font-size: 12px;
@@ -41,13 +42,19 @@
     #videoWrapper {
         height: 200px;
         width: 310px;
-        border-radius: 30px;
+        border-radius: 25px;
         margin-top: 25px;
+        padding-bottom: 7px;
     }
     #videoContainer {
-        width: 295px;
-        height: 188px;
-        border-radius: 20px;
+        width: 298px;
+        height: 192px;
+        overflow-y: hidden;
+        border-radius: 0;
+    }
+    video {
+        top: 7px;
+        border-radius: 15px;
     }
     #backdrop {
         top: 27rem;
