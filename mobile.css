@@ -1,5 +1,11 @@
 
 @media screen and (max-width: 500px) {
+    #logo {
+        transform: scale(0.8) !important;
+    }
+    #logoTitle {
+        padding-left: 2px;
+    }
     nav {
         height: 64px;
         padding-inline: 2rem;
@@ -66,5 +72,81 @@
     }
     p {
         font-size: 12px;
+    }
+    
+    #overwhelmCross {
+        top: -5px;
+        left: 0px;
+    }
+
+    #multitaskingCross {
+        bottom: 15px;
+    }
+
+    #buildUpSection, #howItWorksSection {
+        max-width: 100%;
+    }
+    
+    #featureSection {
+        max-width: 100%;
+    }
+    
+    #buildUpSection {
+        margin-top: 140px;
+    }
+
+    .buildUpItem {
+        width: 100%;
+        margin-bottom: 15px;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+
+    .buildUpItem article, .buildUpItem p {
+        width: 100%;
+        max-width: 100% !important;
+        text-align: center;
+    }
+
+    .buildUpImgs {
+        max-width: 100%;
+        justify-content: flex-start;
+    }
+
+    .buildUpItem:first-of-type .buildUpImgs {
+        transform: scale(0.8);
+    }
+
+    .buildUpItem:last-of-type {
+        margin: 0px auto;
+    }
+
+    .buildUpItem:nth-child(even) {
+        flex-flow: column nowrap;
+    }
+    
+    .buildUpItem:nth-child(even) article {
+        max-width: 140px;
+    }
+    
+    .buildUpItem:nth-child(3n) article {
+        min-width: 100px;
+    }
+    
+    .buildUpItemHeader {
+        font-size: 20px;
+    }
+
+    .buildUpImgs:last-of-type {
+        margin-top: 0;
+    }
+    
+    article p {
+        font-size: 14px;
+    }
+    
+    .buildUpImgs {
+        transform: scale(1);
     }
 }
