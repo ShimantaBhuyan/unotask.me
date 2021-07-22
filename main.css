@@ -171,6 +171,13 @@ footer .getAccess .getAccessForm .emailField {
     cursor: pointer;
 }
 
+.submitButton:disabled {
+    background: linear-gradient(0deg, #b3ada9, #bbaa9b), linear-gradient(180deg, #75726e 0%, #8b7a6d 100%);
+    box-shadow: 0px 8px 14px #b3ada980;
+    z-index: 1;
+    cursor: progress;
+}
+
 #videoWrapper {
     display: flex;
     justify-content: center;
@@ -204,7 +211,7 @@ video {
     height: 632px;
 }
 
-.videoLoader {
+.loader {
     position: absolute;
     width: 69px;
     height: 36px;

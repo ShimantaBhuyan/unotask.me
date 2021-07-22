@@ -1,18 +1,20 @@
 
-let loader = document.querySelector('.videoLoader');
+let videoLoader = document.querySelector('#videoLoader');
 let walkthroughVideo = document.getElementById("walkthroughVideo");
 let navbar = document.getElementsByTagName("nav")[0];
 const toast = document.getElementById("toast");
 const toastMessage = document.getElementById("toastMessage");
 const toastIcon = document.getElementById("toastIcon");
+const emailFields = Array.from(document.querySelectorAll(".emailField"));
+const submitButtons = Array.from(document.querySelectorAll(".submitButton"));
 
 // loader for video player
-const isVideoLoading = (isLoading) => {
-    loader.style.display = isLoading ? 'block' : 'none';
+const isLoading = (isLoading, element) => {
+    element.style.display = isLoading ? 'block' : 'none';
 }
-isVideoLoading(true);
+isLoading(true, videoLoader);
 walkthroughVideo.addEventListener('canplaythrough', (event) => {
-    isVideoLoading(false);
+    isLoading(false, videoLoader);
     walkthroughVideo.playbackRate = 1.5;
 })
 
@@ -35,6 +37,33 @@ const setRegisteredUser = (email) => {
     console.log(registeredUsers);
     window.localStorage.setItem('registeredList', JSON.stringify(registeredUsers));
 }
+const registerEmail = (emailId) => {
+    submitButtons.map(button => button.disabled = true);
+    emailFields.map(field => field.disabled = true);
+    var reqBody = {
+        emailId
+    }
+    fetch("https://unotaskregisterfunction.vercel.app/api", {
+        method: "POST",
+        headers: {
+            'Accept': '*',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(reqBody)
+    }).then(response => {
+        console.log(response);
+        if (response.status === 200) {
+            sendEmail(userEmailAddress);
+        }
+        else {
+            showToast("error", `Error: ${response.statusText}`);
+        }
+    }).catch(err => {
+        console.log(err);
+        showToast("error", `Error: ${err}`);
+    })
+}
+
 const sendEmail = (emailId) => {
     var reqBody = {
         toEmail: emailId,
@@ -51,8 +80,11 @@ const sendEmail = (emailId) => {
         body: JSON.stringify(reqBody)
     }).then(response => {
         console.log(response);
-        if(response.ok) {
-            setRegisteredUser(emailId); 
+        if (response.ok) {
+            setRegisteredUser(emailId);
+            submitButtons.map(button => button.disabled = false);
+            emailFields.map(field => field.value = "");
+            emailFields.map(field => field.disabled = false);
             showToast("success", "Email successfully registered!");
         }
         else {
@@ -72,8 +104,7 @@ forms.map((form) => {
         console.log(!registeredUsers.some(usr => usr.user == e.target[0].value));
         if (e.target[0].value && (registeredUsers.length === 0 || !registeredUsers.some(usr => usr.user == e.target[0].value))) {
             userEmailAddress = e.target[0].value;
-            sendEmail(userEmailAddress);
-            showToast("success", "Email successfully registered!");
+            registerEmail(userEmailAddress);
         }
         else if (!e.target[0].value) {
             showToast("error", "Empty email address!");
