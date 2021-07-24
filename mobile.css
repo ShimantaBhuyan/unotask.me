@@ -1,0 +1,260 @@
+
+@media screen and (max-width: 500px) {
+    #logo {
+        transform: scale(0.8) !important;
+    }
+    #logoTitle {
+        padding-left: 2px;
+    }
+    nav {
+        padding: 0;
+        height: 64px;
+        /* justify-content: center; */
+    }
+    #aboutLink {
+        font-size: 18px;
+    }
+    main {
+        padding-top: 10px;
+    }
+    #headerText {
+        font-size: 1.5rem;
+        line-height: 1.4875rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    #subHeaderText {
+        font-size: 16px;
+        line-height: 1rem;
+        margin-bottom: 2.0625rem;
+        text-align: center;
+    }
+    footer .getAccess {
+        margin-left: 0px;
+    }
+    .emailField {
+        font-size: 12px;
+        line-height: 12px;
+        height: 34px;
+        padding: 20px 22px 20px 12px;
+        border-radius: 8px;
+        width: initial;
+    }
+    .submitButton {
+        height: 42px;
+        width: 6.5rem;
+        padding: 14px 6px 12px;
+        box-shadow: 0px 8px 14px rgba(249, 171, 65, 0.51);
+        border-radius: 8px;
+        font-size: 12px;
+        line-height: 14px;
+        /* margin-left: -70px; */
+    }
+    #videoWrapper {
+        height: 200px;
+        width: 310px;
+        border-radius: 25px;
+        margin-top: 25px;
+        padding-bottom: 7px;
+    }
+    #videoContainer {
+        width: 298px;
+        height: 192px;
+        overflow-y: hidden;
+        border-radius: 0;
+        border: none;
+    }
+    video {
+        top: 7px;
+        border-radius: 15px;
+    }
+    #backdrop {
+        top: 27rem;
+        height: 12rem;
+    }
+    video {
+        width: 295px;
+        height: 188px;
+    }
+    p {
+        font-size: 12px;
+    }
+    
+    #overwhelmCross {
+        top: -5px;
+    }
+
+    #multitaskingCross {
+        bottom: 15px;
+    }
+
+    #buildUpSection, #howItWorksSection {
+        max-width: 100%;
+    }
+    
+    #featureSection {
+        max-width: 100%;
+    }
+    
+    #buildUpSection {
+        margin-top: 140px;
+    }
+
+    .buildUpItem {
+        width: 100%;
+        margin-bottom: 15px;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+
+    .buildUpItem article, .buildUpItem p {
+        width: 100%;
+        max-width: 100% !important;
+        text-align: center;
+    }
+
+    .buildUpImgs {
+        max-width: 100%;
+        justify-content: flex-start;
+    }
+
+    .buildUpItem:first-of-type .buildUpImgs {
+        transform: scale(0.8);
+    }
+
+    .buildUpItem:last-of-type {
+        margin: 0px auto;
+    }
+
+    .buildUpItem:nth-child(even) {
+        flex-flow: column nowrap;
+    }
+    
+    .buildUpItem:nth-child(even) article {
+        max-width: 140px;
+    }
+    
+    .buildUpItem:nth-child(3n) article {
+        min-width: 100px;
+    }
+    
+    .buildUpItemHeader {
+        font-size: 20px;
+    }
+
+    .buildUpImgs:last-of-type {
+        margin-top: 0;
+    }
+    
+    article p {
+        font-size: 14px;
+    }
+    
+    .buildUpImgs {
+        transform: scale(1);
+    }
+
+    #howItWorksSection {
+        margin-top: 80px;
+    }
+    .featureCard {
+        width: 280px;
+        height: 280px;
+        border-radius: 20px;
+    }
+  
+    #carouselContainer {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .carouselImage img {
+        width: 380px !important;
+        height: 237.5px !important;
+    }
+
+    #carouselIndicators {
+        max-width: 100%;
+        overflow-x: hidden;
+        margin-bottom: 90px;
+        justify-content: center;
+    }
+
+    .carouselIndicator {
+        padding: 12px;
+        font-size: 16px;
+        line-height: 18px;
+        cursor: initial;
+    }
+    
+    .activeCarousel {
+        border: 2px solid #3A7DFF;
+        color: #3A7DFF;
+    }
+    
+    #carouselProgressStatic {
+        display: none;
+    }
+    
+    #carouselProgress {
+        display: none;
+    }
+
+    footer {
+        border-radius: none;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 40px;
+        margin-inline: 0px;
+        flex-direction: column;
+        max-width: 100%;
+        padding-block: 15px;
+    }
+
+    #footerAbout {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-inline: 10px;
+        text-align: justify;
+    }  
+
+    #footerAboutText {
+        padding-right: 0;
+    }
+
+    .logo {
+        align-self: center;
+    }
+
+    #toast {
+        display: none;
+        left: 0px !important;
+        margin-left: 21px;
+        /* bottom: 37px; */
+        min-width: 200px;
+        max-width: 280px;
+        padding: 12px;
+        border-radius: 12px;
+    }
+    
+    .show {
+        left: 0px !important;
+        display: flex !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .carouselImage img {
+        width: 320px !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .carouselImage img {
+        width: 280px !important;
+    }
+}
